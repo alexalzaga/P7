@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style type="text/css">
+        .button {
+              background-color: #730ac9;
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+
+            .button:hover {
+                background-color: white;
+                color: #730ac9;
+            }
+    </style>
+</head>
+<body>
+<br>
+<h1 align="center">Administración de Jugadores</h1>
+<br>
+<div align="center" style="border-style: solid">
+    <div align="center">
+        <h5>Visualización de jugadores</h5>
+        <button class="button" onclick="showJugadores()">Pulsa para ver jugadores</button>
+    </div>
+    <br>
+    <div align="center" id="mostrar"></div>
+</div>
+
+<br>
+<div align="center" style="border-style: solid">
+    <div align="center" style="border">
+        <h5>Visualización de personajes</h5>
+        <button class="button" onclick="showPersonajes()">Pulsa para ver personajes</button>
+    </div>
+    <br>
+    <div align="center" id="mostrarPersonajes"></div>
+</div>
+
+<br>
+<div align="center" style="border-style: solid">
+    <h5>Borrar personaje</h5>
+    <p>Elija el ID del personaje que quiere borrar: </p>
+    <select id="perBorrar">
+        <option>1001</option>
+        <option>1002</option>
+        <option>1003</option>
+        <option>1004</option>
+    </select>
+    <button class="button" onclick="deletePersonaje()">Pulsa para borrar</button>
+</div>
+
+<br>
+<div align="center" style="border-style: solid">
+    <h5>Cambiar el personaje de un jugador</h5>
+    <p>Elija el ID del jugador al que quiere cambiar de personaje: </p>
+    <select id="userIdChange">
+        <option>001</option>
+        <option>002</option>
+        <option>003</option>
+        <option>004</option>
+        <option>005</option>
+    </select>
+    <br>
+    <p>Elija el ID del nuevo psicologo para el usuario: </p>
+    <select id="perIdChange">
+        <option>1001</option>
+        <option>1002</option>
+        <option>1003</option>
+        <option>1004</option>
+    </select>
+    <br>
+    <button class="button" onclick="updateJugador()">Pulsa para cambiar el personaje</button>
+</div>
+</body>
+</html>
