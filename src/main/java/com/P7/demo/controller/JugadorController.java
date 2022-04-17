@@ -21,9 +21,6 @@ public class JugadorController {
     @Autowired
     private JugadorService jugadorService;
 
-    //@Autowired
-    //private UsuarioRepository usuarioRepository;
-
     @GetMapping("/jugadores")
     public ResponseEntity<List<JugadorDTO>> getAllJugadores(){
         List<JugadorDTO> jugadores = new ArrayList<JugadorDTO>();
@@ -51,7 +48,7 @@ public class JugadorController {
     }
 
     @GetMapping("/jugadores/conpersonaje/{idPersonaje}")
-    public ResponseEntity<JugadorDTO> getAllUsuariosConPsicById(@PathVariable("idPersonaje") long idPersonaje){
+    public ResponseEntity<JugadorDTO> getAllJugadoresConPersonajeById(@PathVariable("idPersonaje") long idPersonaje){
         List<JugadorDTO> jugadores = new ArrayList<JugadorDTO>();
         JugadorDTO jugadorEncontrado = null;
         jugadores = jugadorService.getJugadoresConPersonaje();
